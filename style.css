@@ -1,0 +1,223 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: navy;
+    list-style: none;
+}
+
+/* Define root variables */
+:root {
+    --bg: #000000;
+}
+
+/* Styling for anchor tags */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Header styling */
+header {
+    background-color: transparent;
+}
+
+/* Container styling */
+.container {
+    width: 90%;
+}
+
+/* Margin auto */
+.mx-auto {
+    margin-inline: auto;
+}
+
+/* Body styling */
+body {
+    background-color: #040404;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Flexbox utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+/* Align items center */
+.item-center {
+    align-items: center;
+}
+
+/* Justify between */
+.justify-b {
+    justify-content: space-between;
+}
+
+/* Gap between elements */
+.gap {
+    gap: 3rem;
+}
+
+/* Padding on x-axis */
+.px {
+    padding-inline: 2rem;
+}
+
+/* Padding on y-axis */
+.py {
+    padding-block: 1rem;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #271456;
+}
+
+/* Text size 2 */
+.text-2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Background image */
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 600px;
+    height: 100%;
+}
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: -10px;
+    left: -100%;
+    opacity: 0;
+    transition:.5s ease-in ;
+    -webkit-transition:.5s ease-in ;
+    -moz-transition:.5s ease-in ;
+    -ms-transition:.5s ease-in ;
+    -o-transition:.5s ease-in ;
+}
+nav ul li a:hover::after{
+    opacity: 1;
+    left: 0%;
+
+}
+/* Hero section styling */
+.hero {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 91px);
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .content h2 {
+    color: rgb(71, 31, 182);
+    font-size: 3rem;
+    padding-block: 1rem;
+}
+
+.hero .content h3 {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.hero .content p {
+    color: gray;
+    width: 50%;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.hero .content button {
+    padding: .8rem 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    outline: none;
+    margin-inline: .8rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+/* Button styles */
+.btn-start {
+    color: white;
+    background-color: transparent;
+    border: solid 2px #5966e4;
+}
+
+.btn-contact {
+    background: #5966e4;
+    border: none;
+    box-shadow: 0 0 10px #5966e4;
+    border: solid 2px transparent;
+}
+
+.btn-start:hover {
+    background: #5966e4;
+    box-shadow: 0 0 10px #5966e4;
+}
+
+.btn-contact:hover {
+    color: white;
+    background-color: transparent;
+    border: solid 2px #5966e4;
+}
+
+/* Image styling */
+.image {
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: imageUp 1s;
+    -webkit-animation: imageUp 1s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+/* Keyframe animation */
+@keyframes imageUp {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
